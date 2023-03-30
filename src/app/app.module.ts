@@ -3,14 +3,43 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPopper } from 'angular-popper';
+import { HeaderComponent } from './componentes/header/header.component';
+import { BannerComponent } from './componentes/banner/banner.component';
+import { AcercadeComponent } from './componentes/acercade/acercade.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { AsideComponent } from './componentes/aside/aside.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { ProgresoComponent } from './componentes/progreso/progreso.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { CirculoComponent } from './componentes/circulo/circulo.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BannerComponent,
+    AcercadeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    AsideComponent,
+    FooterComponent,
+    ProgresoComponent,
+    LoginComponent,
+    CirculoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

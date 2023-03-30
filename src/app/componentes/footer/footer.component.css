@@ -1,0 +1,7 @@
+footer{
+    color: rgb(52, 52, 52);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
