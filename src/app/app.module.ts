@@ -17,8 +17,10 @@ import { ProgresoComponent } from './componentes/progreso/progreso.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { CirculoComponent } from './componentes/circulo/circulo.component';
-
-
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,17 @@ import { CirculoComponent } from './componentes/circulo/circulo.component';
     FooterComponent,
     ProgresoComponent,
     LoginComponent,
-    CirculoComponent
+    CirculoComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
