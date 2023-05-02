@@ -21,6 +21,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
+import { InicioComponent } from './componentes/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     CirculoComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

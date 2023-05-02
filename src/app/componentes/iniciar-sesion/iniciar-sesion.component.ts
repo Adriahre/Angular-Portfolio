@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -8,8 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class IniciarSesionComponent implements OnInit{
   form:FormGroup;
-
-  constructor(private formBuilder:FormBuilder){
+  constructor(private formBuilder:FormBuilder, private router:Router){
     this.form=this.formBuilder.group(
       {
         email:['',[Validators.required,Validators.email]],
@@ -24,5 +24,16 @@ export class IniciarSesionComponent implements OnInit{
 
   ngOnInit(): void {
     
+  }
+
+  login(){
+    if(this.form.valid){
+        console.log("Llamar al servicio de login");
+        this.router.navigateByUrl("/inicio");
+        this.form.reset();
+    }
+    else{
+      alert("Usiario o contraseña no validos")
+    }
   }
 }
