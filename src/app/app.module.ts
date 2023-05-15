@@ -13,7 +13,6 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { AsideComponent } from './componentes/aside/aside.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { ProgresoComponent } from './componentes/progreso/progreso.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { CirculoComponent } from './componentes/circulo/circulo.component';
@@ -47,7 +46,6 @@ import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.compo
     ProyectosComponent,
     AsideComponent,
     FooterComponent,
-    ProgresoComponent,
     LoginComponent,
     CirculoComponent,
     IniciarSesionComponent,

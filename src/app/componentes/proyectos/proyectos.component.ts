@@ -23,7 +23,7 @@ export class ProyectosComponent implements OnInit{
     } else {
       this.isLogged = false;
     }
-  } 
+  }  
 
   cargarProyecto(): void{
     this.proyectoS.lista().subscribe(data => {this.proyecto = data})
