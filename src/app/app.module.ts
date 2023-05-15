@@ -22,6 +22,19 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { FormsModule } from '@angular/forms';
+import { NgModel } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { EditSkillsComponent } from './componentes/circulo/edit-skills.component';
+import { NewSkillsComponent } from './componentes/circulo/new-skills.component';
+import { EditAcercadeComponent } from './componentes/acercade/edit-acercade.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +52,16 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
     CirculoComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    InicioComponent
+    InicioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+    EditAcercadeComponent,
+    EditProyectoComponent,
+    NewProyectoComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +69,13 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
     NgbModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

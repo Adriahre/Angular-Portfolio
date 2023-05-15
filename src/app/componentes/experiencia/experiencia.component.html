@@ -1,8 +1,20 @@
 <article class="container">
     <h2 class="display-6">Experiencia</h2>
     <p class="text-muted">Incluir puesto, periodo, logo de la empresa (en caso de tenerlo) y una breve descripción de las actividades realizadas en el puesto.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis saepe laborum deserunt labore magnam praesentium maiores quos. Aut alias sit repellat soluta, aliquid pariatur labore officia recusandae veritatis quos.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem esse nobis neque labore aperiam quis adipisci quidem nam dolorum cum fugit quae doloribus tempora obcaecati id corrupti, repellat iusto?
     </p>
+    <button type="button" class="btn btn-success" routerLink="/nuevaexpe" *ngIf="isLogged">
+        <i class="bi bi-plus-circle-dotted"></i> Añadir
+    </button>
+    <div class="text-muted">
+        <div class="display-3">
+                <div *ngFor="let Experiencia of expe">
+                    <h6>{{Experiencia.nombreE}}</h6>
+                    <p>{{Experiencia.descripcionE}}</p>
+                        <button class="btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-warning" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                            <i class="bi bi-trash"></i> </button>
+                </div>
+        </div>
+    </div>
 </article>
-  

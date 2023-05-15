@@ -6,3 +6,23 @@
         </p>
     </section>
 </div>
+<article class="container">
+    <h2 class="display-6">Educación</h2>
+    <p class="text-muted">Información de la formación académica, certificaciones, cursos. Información del instituto, logo, nombre, carrera o título, período o año.
+    </p>
+    <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
+        <i class="bi bi-plus-circle-dotted"></i> Añadir
+    </button>
+    <div class="text-muted">
+        <div class="display-3">
+                <div *ngFor="let Educacion of educacion">
+                    <h6>{{Educacion.nombreE}}</h6>
+                    <p>{{Educacion.descripcionE}}</p>
+                        <button class="btn btn-secondary" routerLink="/editedu/{{Educacion.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-warning" (click)="delete(Educacion.id)" *ngIf="isLogged">
+                            <i class="bi bi-trash"></i> </button>
+                </div>
+        </div>
+    </div>
+</article>

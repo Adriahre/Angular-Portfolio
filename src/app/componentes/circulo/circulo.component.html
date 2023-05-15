@@ -1,4 +1,29 @@
+<div class="container">
+    <h2 class="display-6">Hard & Soft Skills</h2>
+    <button type="button" class="btn btn-dark" routerLink="/newskill" *ngIf="isLogged">
+        <i class="bi bi-plus-circle-dotted"></i></button>
+</div>
 <div class="row">
+    <div class="text-center col-sm-4 col-md-4 col-lg-3" *ngFor="let skills of skills">
+        <circle-progress
+        [percent]="(skills.porcentaje)"
+        [radius]="100"
+        [subtitle]="(skills.nombre)"
+        [subtitleFontSize]="'30'"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="6"
+        [outerStrokeColor]="'#3b5724'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [animationDuration]="900"
+        ></circle-progress>
+
+        <button class="btn btn-secondary" routerLink="/editskill/{{skills.id}}" *ngIf="isLogged">
+            <i class="bi bi-pencil-square"></i></button>
+        <button class="btn btn-warning" (click)="delete(skills.id)" *ngIf="isLogged">
+            <i class="bi bi-bookmark-x-fill"></i> </button>
+    </div>
+<!-- <div class="row">
     <div class="text-center col-sm-4 col-md-4 col-lg-3">
         <circle-progress
         [percent]="80"
@@ -12,8 +37,8 @@
         [animation]="true"
         [animationDuration]="900"
         ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-3">
+    </div> -->
+    <!-- <div class="text-center col-sm-4 col-md-4 col-lg-3">
         <circle-progress
         [percent]="40"
         [radius]="100"
@@ -69,4 +94,4 @@
         [animationDuration]="900"
         ></circle-progress>
     </div>
-</div>
+</div> -->

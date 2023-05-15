@@ -1,6 +1,20 @@
 <article class="container">
     <h2 class="display-6">Proyectos</h2>
     <p class="text-muted">Cada proyecto debe contener el nombre, fecha de realización, descripción del proyecto y/o un link.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, perferendis repellat, necessitatibus illum dicta ut excepturi tenetur est sint ipsam consequatur temporibus laudantium? Aliquam placeat illum nesciunt, similique totam doloribus!
-    </p>
+    </p> 
+    <button type="button" class="btn btn-success" routerLink="/nuevoproyecto" *ngIf="isLogged">
+      <i class="bi bi-plus-circle-dotted"></i> Añadir
+  </button>
+  <div class="text-muted">
+      <div class="display-3">
+              <div *ngFor="let Proyecto of proyecto">
+                  <h6>{{Proyecto.nombreP}}</h6>
+                  <p>{{Proyecto.descripcionP}}</p>
+                      <button class="btn btn-secondary" routerLink="/editproyecto/{{Proyecto.id}}" *ngIf="isLogged">
+                      <i class="bi bi-pencil-square"></i></button>
+                      <button class="btn btn-warning" (click)="delete(Proyecto.id)" *ngIf="isLogged">
+                          <i class="bi bi-trash"></i> </button>
+              </div>
+      </div>
+  </div>
   </article>
